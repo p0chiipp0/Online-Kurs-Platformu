@@ -1,0 +1,579 @@
+HEXTECH AKADEMİ - KULLANIM KILAVUZU
+===================================
+
+Sayın Hocam,
+
+Bu proje, Python ve CustomTkinter kullanılarak geliştirilmiş kapsamlı bir online kurs yönetim platformudur. Uygulama yalnızca basit bir giriş ekranı veya ders listesi değildir; öğrenci, öğretmen ve admin rollerini ayrı ayrı ele alan, gerçek bir eğitim platformu mantığıyla hazırlanmış çok yönlü bir sistemdir.
+
+Hextech Akademi; kullanıcı girişi, hesap oluşturma, rol bazlı paneller, kurs yönetimi, ders kaydı, materyal sistemi, ödev, sınav, yorum, forum, mesajlaşma, destek talepleri, duyuru yönetimi, bildirimler ve admin kontrol ekranları gibi birçok özelliği tek uygulama içinde toplamaktadır. Arayüz koyu tema, modern kart yapısı ve sol menü düzeniyle kullanıcıya profesyonel bir platform hissi verir.
+
+------------------------------------------------------------
+1. PROJENİN AMACI
+------------------------------------------------------------
+
+Hextech Akademi'nin amacı, bir kurs merkezinde veya online eğitim platformunda ihtiyaç duyulabilecek temel işlemleri masaüstü uygulaması içinde yönetilebilir hale getirmektir.
+
+Uygulama üç ana kullanıcı rolüne sahiptir:
+
+- Öğrenci
+- Öğretmen
+- Admin
+
+Her kullanıcı rolü kendi yetkisine göre farklı ekranlar görür ve farklı işlemler yapabilir. Bu sayede proje, sadece görsel bir arayüz değil, aynı zamanda rol bazlı yetkilendirme mantığına sahip gerçekçi bir yönetim sistemi sunar.
+
+------------------------------------------------------------
+2. KULLANILAN TEKNOLOJİLER
+------------------------------------------------------------
+
+Projede kullanılan temel teknolojiler:
+
+- Python
+- CustomTkinter
+- Tkinter
+- JSON tabanlı veri saklama
+- Dosya tabanlı veri yönetimi
+- Rol bazlı panel yapısı
+- Modüler ekran tasarımı
+- Masaüstü uygulama mimarisi
+
+Veriler JSON dosyası üzerinden saklandığı için uygulama basit, taşınabilir ve ders projesi için anlaşılır bir yapıdadır.
+
+------------------------------------------------------------
+3. UYGULAMAYI ÇALIŞTIRMA
+------------------------------------------------------------
+
+Proje klasörü açıldıktan sonra uygulama şu dosya üzerinden çalıştırılır:
+
+main.py
+
+Komut satırından çalıştırmak için:
+
+python main.py
+
+Uygulama açıldığında giriş ekranı gelir. Kullanıcı rolüne göre öğrenci, öğretmen veya admin paneline yönlendirilir.
+
+------------------------------------------------------------
+4. GENEL ARAYÜZ
+------------------------------------------------------------
+
+Hextech Akademi modern bir koyu tema ile hazırlanmıştır. Arayüzde sol tarafta menü, orta bölümde içerik alanı ve üst/yan bölümlerde işlem kartları bulunur.
+
+Arayüzde dikkat edilen noktalar:
+
+- Sade ve okunabilir tasarım
+- Kart tabanlı ekran yapısı
+- Rol bazlı menüler
+- Renkli durum göstergeleri
+- Bildirim ve uyarı sistemi
+- Daha anlaşılır buton yerleşimi
+- Logo ve pencere ikonu desteği
+- Görev çubuğunda uygulama logosu
+
+Logo hem uygulama içinde hem de pencere/görev çubuğu tarafında kullanılacak şekilde ayarlanmıştır. Bu da projeye daha tamamlanmış ve profesyonel bir görünüm kazandırır.
+
+------------------------------------------------------------
+5. GİRİŞ VE HESAP SİSTEMİ
+------------------------------------------------------------
+
+Uygulamada kullanıcılar giriş yaparak kendi rollerine uygun panele ulaşır.
+
+Giriş ekranında:
+
+- E-posta ve şifre ile giriş yapılabilir.
+- Yanlış girişlerde uyarı verilir.
+- Öğrenci hesabı oluşturulabilir.
+- Öğretmen veya admin başvurusu yapılabilir.
+- Şifre alanı güvenli biçimde kullanılır.
+- Giriş ekranında platform logosu gösterilir.
+
+Bu sistem sayesinde uygulama tek tip kullanıcıya değil, farklı yetkileri olan kullanıcılara hizmet verir.
+
+------------------------------------------------------------
+6. ÖĞRENCİ PANELİ
+------------------------------------------------------------
+
+Öğrenci paneli, öğrencinin derslerini takip edebileceği, materyallerini görüntüleyebileceği, ödev ve sınavlarını kontrol edebileceği ana kullanım alanıdır.
+
+Öğrenci panelinde yapılabilecekler:
+
+- Kayıtlı dersleri görüntüleme
+- Yeni derslere kayıt olma
+- Ders odasına girme
+- Ders materyallerini açma
+- Ödevleri görüntüleme
+- Sınavları takip etme
+- Not ve belge durumlarını inceleme
+- Derslere yorum bırakma
+- Forum konularını görüntüleme ve cevaplama
+- Öğretmenlerle mesajlaşma
+- Destek talebi oluşturma
+- Bildirimleri takip etme
+- Takvim üzerinden önemli tarihleri görme
+
+Öğrenci paneli, gerçek bir kurs öğrencisinin günlük olarak ihtiyaç duyabileceği ana işlemleri karşılayacak şekilde hazırlanmıştır.
+
+------------------------------------------------------------
+7. DERSLERİM VE DERS KAYDI
+------------------------------------------------------------
+
+Öğrenci, Ders Kaydı ekranından açık olan kursları görüntüleyebilir ve uygun derslere kayıt olabilir.
+
+Ders kartlarında genellikle şu bilgiler yer alır:
+
+- Kurs adı
+- Öğretmen adı
+- Kontenjan durumu
+- Ders açıklaması
+- Ders günleri
+- Ders saati
+- Sınav tarihi
+- Kurs durumu
+
+Öğrenci bir derse kayıt olduğunda ders kendi panelinde görünür. Kapalı kurslar öğrenci tarafında kullanılabilir ders olarak görünmez.
+
+------------------------------------------------------------
+8. DERS ODASI
+------------------------------------------------------------
+
+Derse Git butonu ile açılan ders odası, projenin en önemli ekranlarından biridir.
+
+Ders odasında:
+
+- Kurs başlığı ve açıklaması gösterilir.
+- Öğretmen bilgisi görünür.
+- Mini takvim alanında ders günleri, saat ve sınav tarihi yer alır.
+- Ders içerikleri listelenir.
+- Materyaller gösterilir.
+- Materyal bağlantıları açılabilir.
+- Öğrenci yorum bırakabilir.
+- Katılan öğrenciler listelenir.
+- Öğretmen kendi dersi için materyal ekleyebilir.
+
+Son düzeltmeyle birlikte materyal açma sistemi güçlendirilmiştir. Artık materyal butonuna tıklandığında yanlış materyal açılması engellenmiş, her materyal kendi bağlantısını sabit ve doğru şekilde açacak hale getirilmiştir.
+
+------------------------------------------------------------
+9. MATERYAL SİSTEMİ
+------------------------------------------------------------
+
+Materyal sistemi hem öğrenci hem öğretmen tarafında kullanılır.
+
+Öğrenci tarafında:
+
+- Kayıtlı derslerine ait materyalleri görebilir.
+- PDF, web bağlantısı veya yerel dosya bağlantısını açabilir.
+- Materyaller derslere göre listelenir.
+
+Öğretmen tarafında:
+
+- Kendi derslerine materyal ekleyebilir.
+- Materyal adı ve bağlantısı girebilir.
+- Eklenen materyal öğrencilerin ekranında görünür.
+- Materyal eklendiğinde ilgili öğrencilere bildirim gönderilir.
+
+Admin tarafında:
+
+- Sistemdeki materyaller incelenebilir.
+- Gerekirse materyaller silinebilir.
+- Admin bir kursu kapattığında o kursun materyalleri de temizlenir.
+
+Bu yapı, eğitim platformu mantığına uygun şekilde ders kaynaklarının düzenli yönetilmesini sağlar.
+
+------------------------------------------------------------
+10. ÖDEV SİSTEMİ
+------------------------------------------------------------
+
+Ödev sistemi öğretmen ve öğrenci tarafında ayrı çalışır.
+
+Öğretmen:
+
+- Kendi dersi için ödev oluşturabilir.
+- Ödev açıklaması girebilir.
+- Son teslim tarihi belirleyebilir.
+- Öğrencilerin ödev takibini kolaylaştırır.
+
+Öğrenci:
+
+- Kendisine ait derslerdeki ödevleri görüntüler.
+- Teslim tarihlerini takip eder.
+- Ödevleri takvimle bağlantılı şekilde görebilir.
+
+Admin:
+
+- Sistemdeki ödevleri inceleyebilir.
+- Gerekirse ödevleri silebilir.
+
+------------------------------------------------------------
+11. SINAV SİSTEMİ
+------------------------------------------------------------
+
+Sınav sistemi, öğrencinin yaklaşan sınavlarını takip etmesini sağlar.
+
+Öğretmen:
+
+- Dersine sınav ekleyebilir.
+- Sınav tarihi belirleyebilir.
+- Sınav açıklaması girebilir.
+
+Öğrenci:
+
+- Sınav tarihlerini görebilir.
+- Yaklaşan sınavları takip eder.
+- Takvim üzerinden sınav günlerini inceleyebilir.
+
+Admin:
+
+- Sınav kayıtlarını yönetebilir.
+- Gerekli durumlarda sınavları silebilir.
+
+------------------------------------------------------------
+12. YORUM SİSTEMİ
+------------------------------------------------------------
+
+Öğrenciler derslere yorum bırakabilir. Bu özellik, kurslar hakkında geri bildirim toplanmasını sağlar.
+
+Öğrenci:
+
+- Kayıtlı olduğu ders için yorum yazabilir.
+- Puan verebilir.
+- Daha önce yapılan yorumları görebilir.
+
+Öğretmen:
+
+- Dersleri hakkında yapılan yorumları inceleyebilir.
+
+Admin:
+
+- Yorumları yönetebilir.
+- Uygunsuz yorumları silebilir.
+
+Bu sistem, platforma etkileşim kazandırır ve sadece tek yönlü ders takibi olmaktan çıkarır.
+
+------------------------------------------------------------
+13. FORUM SİSTEMİ
+------------------------------------------------------------
+
+Forum sistemi, öğrenciler ve öğretmenler arasında daha genel bir iletişim alanı oluşturur.
+
+Forumda:
+
+- Konu açılabilir.
+- Konulara cevap yazılabilir.
+- Ders veya genel eğitim konuları tartışılabilir.
+- Admin uygunsuz konuları veya mesajları silebilir.
+
+Bu bölüm, platforma topluluk hissi kazandırır.
+
+------------------------------------------------------------
+14. MESAJLAŞMA SİSTEMİ
+------------------------------------------------------------
+
+Mesajlaşma bölümü, kullanıcılar arasında daha özel iletişim kurmak için tasarlanmıştır.
+
+Öğrenci:
+
+- Öğretmenlerle mesajlaşabilir.
+- Konuşma başlatabilir.
+- Gelen mesajları takip edebilir.
+
+Öğretmen:
+
+- Öğrencilerle mesajlaşabilir.
+- Dersle ilgili özel bilgilendirme yapabilir.
+
+Admin:
+
+- Mesaj sistemini denetleyebilir.
+- Gerekli durumlarda mesaj kayıtlarını inceleyebilir.
+
+Bu özellik, gerçek platformlarda bulunan özel iletişim mantığını projeye ekler.
+
+------------------------------------------------------------
+15. DESTEK TALEPLERİ
+------------------------------------------------------------
+
+Destek sistemi, öğrencilerin ve öğretmenlerin sorun bildirmesini sağlar.
+
+Kullanıcılar:
+
+- Destek talebi açabilir.
+- Konu, öncelik ve açıklama girebilir.
+- Admin cevabını takip edebilir.
+- Talep üzerinden konuşma şeklinde ilerleyebilir.
+
+Admin:
+
+- Gelen destek taleplerini görür.
+- Taleplere cevap yazar.
+- Talebi sonuçlandırabilir.
+- Tamamlanan talepleri kilitleyebilir.
+
+Bu yapı, uygulamaya gerçek bir müşteri destek / teknik destek sistemi havası katar.
+
+------------------------------------------------------------
+16. BİLDİRİM SİSTEMİ
+------------------------------------------------------------
+
+Uygulamada bildirim mantığı bulunmaktadır.
+
+Bildirimler şu durumlarda kullanılabilir:
+
+- Yeni materyal eklenince
+- Kurs kapatılınca
+- Öğrenci veya öğretmenle ilgili önemli işlem yapılınca
+- Destek cevabı verildiğinde
+- Sistem duyurusu olduğunda
+
+Bildirim sistemi, kullanıcıların önemli gelişmeleri kaçırmamasını sağlar.
+
+------------------------------------------------------------
+17. ÖĞRETMEN PANELİ
+------------------------------------------------------------
+
+Öğretmen paneli, kurs açma ve kurs yönetimi üzerine kuruludur.
+
+Öğretmen panelinde yapılabilecekler:
+
+- Kendi kurslarını görüntüleme
+- Yeni kurs açma
+- Ders günlerini ve saatini belirleme
+- Sınav tarihi ekleme
+- Materyal ekleme
+- Ödev oluşturma
+- Sınav oluşturma
+- Ders yorumlarını inceleme
+- Forum kullanma
+- Öğrencilerle mesajlaşma
+- Destek talebi açma
+- Yardım ekranından sistem kullanımı hakkında bilgi alma
+
+Öğretmen panelinde gereksiz rozet sistemi kaldırılmıştır. Böylece öğretmen ekranı daha sade, daha ders odaklı ve daha mantıklı hale getirilmiştir.
+
+------------------------------------------------------------
+18. ADMİN PANELİ
+------------------------------------------------------------
+
+Admin paneli, sistemin yönetim merkezidir. Admin kullanıcı, platformdaki birçok kritik işlemi kontrol edebilir.
+
+Admin panelinde yapılabilecekler:
+
+- Öğrencileri, öğretmenleri ve adminleri görüntüleme
+- Kullanıcı arama
+- Kullanıcı kaldırma
+- Öğretmen başvurularını onaylama
+- Admin başvurularını yönetme
+- Kursları inceleme
+- Kursları gerekçeli şekilde kapatma
+- Materyalleri inceleme ve silme
+- Ödevleri yönetme
+- Sınavları yönetme
+- Yorumları silme
+- Forum konularını ve mesajlarını yönetme
+- Mesaj kayıtlarını inceleme
+- Destek taleplerini cevaplama
+- Duyuru oluşturma
+- Yardım ekranından admin işlemlerini inceleme
+
+Admin paneli, projenin en güçlü taraflarından biridir. Çünkü yalnızca kullanıcıya ekran göstermekle kalmaz, sistemdeki verileri düzenleyebilen gerçek bir yönetim yapısı sunar.
+
+------------------------------------------------------------
+19. ADMİN KURS KAPATMA SİSTEMİ
+------------------------------------------------------------
+
+Admin, bir kursu kapatırken gerekçe girebilir. Bu işlem gerçek platformlardaki yönetim mantığına benzer şekilde tasarlanmıştır.
+
+Kurs kapatıldığında:
+
+- Kurs kapalı duruma alınır.
+- Kapatma nedeni kaydedilir.
+- Kapatılma tarihi kaydedilir.
+- Öğretmene bildirim gönderilir.
+- Kayıtlı öğrencilere bildirim gönderilir.
+- Admin log kaydı oluşur.
+- Kurs öğretmen ve öğrenci panellerinde kullanılabilir açık kurs gibi görünmez.
+- Kursa ait materyaller de temizlenir.
+
+Son güncellemede özellikle şu hata düzeltilmiştir:
+
+Admin bir dersi kaldırdığında/kapatıldığında o derse ait materyaller sistemde kalmamalıdır. Artık kurs kapatılınca ilgili materyaller de kaldırılır.
+
+------------------------------------------------------------
+20. DUYURU SİSTEMİ
+------------------------------------------------------------
+
+Admin sistem genelinde duyuru oluşturabilir.
+
+Duyurular:
+
+- Kullanıcılara bilgi vermek için kullanılabilir.
+- Sistem güncellemesi, sınav haftası veya kurs değişikliği gibi konular duyurulabilir.
+- Platformun yönetilebilirliğini artırır.
+
+------------------------------------------------------------
+21. KULLANICI YÖNETİMİ
+------------------------------------------------------------
+
+Admin kullanıcı yönetimi ekranında sistemdeki kişileri görebilir.
+
+Admin:
+
+- Öğrencileri listeler.
+- Öğretmenleri listeler.
+- Adminleri listeler.
+- Kullanıcı arayabilir.
+- Gerekçe yazarak kullanıcı kaldırabilir.
+
+Bu bölüm sistem güvenliği ve düzeni açısından önemlidir.
+
+------------------------------------------------------------
+22. BAŞVURU ONAY SİSTEMİ
+------------------------------------------------------------
+
+Öğretmen veya admin olmak isteyen kullanıcılar başvuru yapabilir.
+
+Admin:
+
+- Bekleyen öğretmen başvurularını görür.
+- Başvuruları onaylayabilir.
+- Admin başvurularını inceleyebilir.
+- Onaylanan kullanıcı ilgili role erişebilir.
+
+Bu özellik, platforma gerçek kayıt/onay süreci mantığı kazandırır.
+
+------------------------------------------------------------
+23. TAKVİM VE AKADEMİK TAKİP
+------------------------------------------------------------
+
+Uygulamada ders, sınav ve ödev tarihleriyle ilişkili takvim mantığı bulunur.
+
+Öğrenci:
+
+- Yaklaşan ders, ödev ve sınavları takip edebilir.
+- Bugün ne olduğunu panelinden görebilir.
+- Önemli tarihleri kaçırmaz.
+
+Öğretmen:
+
+- Ders günleri ve sınav tarihleri belirleyebilir.
+- Öğrencilerin takip edeceği akademik akışı oluşturur.
+
+------------------------------------------------------------
+24. YARDIM EKRANLARI
+------------------------------------------------------------
+
+Uygulamada rol bazlı yardım ekranları bulunur.
+
+Öğrenci yardım ekranı:
+
+- Ders kaydı
+- Materyaller
+- Ödevler
+- Sınavlar
+- Forum
+- Mesajlar
+- Destek
+
+Öğretmen yardım ekranı:
+
+- Kurs açma
+- Materyal ekleme
+- Ödev/sınav yönetimi
+- Yorumları takip etme
+- Mesajlaşma
+- Destek
+
+Admin yardım ekranı:
+
+- Kullanıcı yönetimi
+- Başvuru onayı
+- Kurs yönetimi
+- Materyal yönetimi
+- Forum yönetimi
+- Destek
+- Duyuru
+
+Yardım ekranları, hocanın veya kullanıcıların uygulamayı daha kolay anlamasını sağlar.
+
+------------------------------------------------------------
+25. SON DÜZELTMELER
+------------------------------------------------------------
+
+Projede son aşamada özellikle kritik hatalar giderilmiştir:
+
+1. Admin ve öğretmen tarafındaki rozet sistemi kaldırıldı.
+Öğretmen ve admin rolleri için rozet sistemi gereksizdi. Bu yüzden yönetici ve öğretmen tarafı daha sade ve daha mantıklı hale getirildi.
+
+2. Admin kurs kapattığında materyaller de kaldırılıyor.
+Önceden kurs kapansa bile materyaller kalabiliyordu. Artık kurs kapandığında o kursun materyalleri de temizleniyor.
+
+3. Materyal bağlantıları doğru açılıyor.
+Derse Git ekranındaki materyal butonlarında yanlış materyal açılma sorunu giderildi. Her buton artık kendi materyal linkini açıyor.
+
+4. Logo ve görev çubuğu ikonu düzeltildi.
+Uygulama logosu giriş ekranında, menüde ve Windows görev çubuğunda görünecek şekilde ayarlanmıştır.
+
+------------------------------------------------------------
+26. PROJENİN GÜÇLÜ YÖNLERİ
+------------------------------------------------------------
+
+Bu proje ders kapsamında oldukça kapsamlıdır. Çünkü yalnızca tek bir ekran veya basit CRUD işlemi değil, birden fazla kullanıcı rolüne sahip bütünleşik bir platform sunar.
+
+Güçlü yönler:
+
+- Rol bazlı giriş sistemi
+- Öğrenci, öğretmen ve admin için ayrı paneller
+- Kurs açma ve kursa kayıt olma
+- Ders odası sistemi
+- Materyal yönetimi
+- Ödev ve sınav takibi
+- Forum sistemi
+- Mesajlaşma sistemi
+- Destek talep sistemi
+- Admin yönetim ekranları
+- Bildirim mantığı
+- Duyuru sistemi
+- Modern koyu tema
+- Logo ve görev çubuğu ikonu
+- JSON tabanlı veri saklama
+- Gerekçeli admin işlemleri
+- Gerçek platform mantığına yakın yapı
+
+Hextech Akademi bu özellikleriyle, temel bir kurs uygulamasından daha gelişmiş bir eğitim yönetim sistemi görünümündedir.
+
+------------------------------------------------------------
+27. HOCAYA SUNUM İÇİN ÖNERİLEN AKIŞ
+------------------------------------------------------------
+
+Projeyi gösterirken şu sıra izlenebilir:
+
+1. Uygulamayı açın.
+2. Giriş ekranındaki logo ve modern arayüzü gösterin.
+3. Öğrenci hesabıyla giriş yapın.
+4. Öğrenci panelinde dersleri, materyalleri, ödevleri ve sınavları gösterin.
+5. Derse Git ekranını açıp ders odasını gösterin.
+6. Materyal bağlantısının doğru açıldığını gösterin.
+7. Öğretmen hesabına geçip kurs ve materyal eklemeyi gösterin.
+8. Admin hesabına geçip kullanıcı, kurs ve materyal yönetimini gösterin.
+9. Adminin kurs kapatma işlemini gösterin.
+10. Kurs kapatılınca materyallerin de kaldırıldığını belirtin.
+11. Forum, mesajlaşma ve destek sistemlerini gösterin.
+12. Duyuru ve bildirim mantığını anlatın.
+
+Bu akış, projenin hem kullanıcı tarafını hem de yönetim tarafını net biçimde gösterir.
+
+------------------------------------------------------------
+28. GENEL DEĞERLENDİRME
+------------------------------------------------------------
+
+Hextech Akademi, kurs yönetimi senaryosunu başarılı şekilde ele alan kapsamlı bir masaüstü uygulamasıdır. Öğrenci sadece ders kaydı yapmaz; ders odasına girer, materyal açar, ödev ve sınavlarını takip eder, yorum yazar, forum ve destek sistemiyle etkileşime girer.
+
+Öğretmen sadece ders açmaz; kendi kurslarını yönetir, materyal ekler, ödev/sınav oluşturur ve öğrencilerle iletişim kurar.
+
+Admin ise tüm sistemi kontrol eden gerçek bir yönetici rolüne sahiptir. Kullanıcıları, başvuruları, kursları, materyalleri, forumu, mesajları, destek taleplerini ve duyuruları yönetebilir.
+
+Bu yönleriyle proje; arayüz, veri yönetimi, kullanıcı rolleri, etkileşimli ekranlar ve yönetim mantığı açısından güçlü bir final projesi niteliğindedir.
+
+------------------------------------------------------------
+HAZIRLAYAN
+------------------------------------------------------------
+
+E.Hira YAĞMUR
